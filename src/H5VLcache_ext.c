@@ -6034,8 +6034,8 @@ static herr_t create_dataset_cache_on_local_storage(void *obj, void *dset_args,
       }
 
       H5LSregister_cache(dset->H5LS, dset->H5DRMM->cache, obj);
-      dset->H5LS->cache_head = dset->H5LS->cache_list; 
-      dset->H5LS->cache_list = dset->H5LS->cache_list->next; 
+      dset->H5LS->cache_head = dset->H5LS->cache_list;
+      dset->H5LS->cache_list = dset->H5LS->cache_list->next;
       // create mmap window
       hsize_t ss = round_page(dset->H5DRMM->dset.size);
 
